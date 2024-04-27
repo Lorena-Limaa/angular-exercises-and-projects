@@ -1,0 +1,22 @@
+<!-- Label for the input field -->
+<label for="">Add Product: </label>
+
+<!-- Input field for adding products -->
+<input
+ type="text" 
+ [(ngModel)]="inputProduct" 
+ (keyup.enter)="addProduct()"> 
+ 
+<!-- Two-way data binding to bind input value to 'inputProduct' variable -->
+<!-- Event binding to call 'addProduct()' method when Enter key is pressed -->
+
+<!-- Conditional rendering based on 'showCounter' variable -->
+@if (showCounter) { <!-- If 'showCounter' is true -->
+    <div>
+        <!-- Include shopping cart component -->
+        <app-shopping-cart></app-shopping-cart>
+    </div>
+}
+
+<!-- Button to toggle visibility of counter -->
+<button (click)="showCounter = !showCounter">Show / Hide counter</button>
